@@ -1,9 +1,9 @@
+using Chat.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Chat.Hubs;
 
 namespace Chat
 {
@@ -43,12 +43,12 @@ namespace Chat
             app.UseRouting();
 
             app.UseAuthorization();
-            
-            app.UseEndpoints(endpoints =>  
-            {  
-                endpoints.MapHub<ChatHub>("/chat");  
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<ChatHub>("/chat");
             });
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();

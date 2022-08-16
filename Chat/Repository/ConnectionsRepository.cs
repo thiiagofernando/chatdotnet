@@ -1,7 +1,7 @@
 
+using Chat.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Chat.Models;
 
 namespace Chat.Repository
 {
