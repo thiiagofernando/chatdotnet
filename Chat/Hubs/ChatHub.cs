@@ -1,15 +1,14 @@
 
 using Chat.Models;
-using Microsoft.AspNetCore.SignalR;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 using Chat.Repository;
+using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 
 namespace Chat.Hubs
 {
-   public class ChatHub : Hub
+    public class ChatHub : Hub
     {
         private readonly static ConnectionsRepository _connections = new ConnectionsRepository();
 
@@ -24,7 +23,7 @@ namespace Chat.Hubs
 
         public async Task SendMessage(Mensagem chat)
         {
-            await Clients.Client(_connections.ObterUsuarioPorId(chat.Destination )).SendAsync("Receive", chat.Sender , chat.Message );
+            await Clients.Client(_connections.ObterUsuarioPorId(chat.Destination)).SendAsync("Receive", chat.Sender, chat.Message);
         }
     }
 }

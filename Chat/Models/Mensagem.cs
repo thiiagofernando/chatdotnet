@@ -1,4 +1,3 @@
-using System;
 namespace Chat.Models
 {
     public class Mensagem
