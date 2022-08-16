@@ -1,4 +1,4 @@
-# Chat com ASP.NET Core e SignalR
+# Teste Técnico - Chat com ASP.NET Core e SignalR
 Tecnologias utilizadas,
 - .NET 5
 - Node.js
