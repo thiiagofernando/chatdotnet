@@ -18,7 +18,7 @@ namespace Chat.Repository
         public string ObterUsuarioPorId(long id)
         {
             return (from con in connections
-                    where con.Value.Chave == id
+                    where con.Value.Key == id
                     select con.Key).FirstOrDefault();
         }
 

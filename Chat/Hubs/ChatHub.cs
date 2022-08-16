@@ -24,7 +24,7 @@ namespace Chat.Hubs
 
         public async Task SendMessage(Mensagem chat)
         {
-            await Clients.Client(_connections.ObterUsuarioPorId(chat.Destino)).SendAsync("Receive", chat.Remetente, chat.Texto);
+            await Clients.Client(_connections.ObterUsuarioPorId(chat.Destination )).SendAsync("Receive", chat.Sender , chat.Message );
         }
     }
 }

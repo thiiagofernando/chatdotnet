@@ -3,8 +3,8 @@ namespace Chat.Models
 {
     public class Mensagem
     {
-        public long Destino { get; set; }
-        public Usuario Remetente{get;set;}
-        public string Texto{get;set;}
+        public long Destination { get; set; }
+        public Usuario Sender { get; set; }
+        public string Message { get; set; }
     }
 }
